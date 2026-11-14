@@ -365,11 +365,4 @@ All individual kernels passed their validation tests, and the complete GPU forwa
 
 The experiment clearly demonstrates both the advantage of GPU parallelism for neural-network computations and the importance of memory-transfer overhead in real-world GPU performance.
 
----
 
-
-**Sankalp Patil**  
-B.Tech – Computer Science & Artificial Intelligence  
-KLE Technological University
-
-⭐ If you found this project useful, consider giving the repository a star!
