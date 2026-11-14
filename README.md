@@ -1,22 +1,22 @@
-# 🚀 Neural Network Layers in CUDA
+# Neural Network Layers in CUDA
 
 > **Experiment 5 – Parallel and GPU Computing Laboratory**
 
 A CUDA C++ implementation of a **two-layer feed-forward neural network** using custom GPU kernels. The project implements matrix multiplication with bias, ReLU, and sigmoid activation, validates CPU/GPU correctness, and benchmarks GPU acceleration.
 
-## ✨ Highlights
+##  Highlights
 
-- ⚡ Custom CUDA kernels
-- 🧠 Two-layer neural-network forward propagation
-- 🔬 Individual known-answer kernel tests
-- ⏱️ CPU vs GPU benchmarking
-- 📊 Kernel-only and end-to-end timing analysis
-- ✅ Exact observed CPU/GPU validation match
-- 🚀 **32.13× kernel-only speedup**
+-  Custom CUDA kernels
+-  Two-layer neural-network forward propagation
+-  Individual known-answer kernel tests
+-  CPU vs GPU benchmarking
+-  Kernel-only and end-to-end timing analysis
+-  Exact observed CPU/GPU validation match
+-  **32.13× kernel-only speedup**
 
 ---
 
-## 🧠 Neural Network Architecture
+##  Neural Network Architecture
 
 This project implements **forward propagation only**. It does not include training, backpropagation, loss calculation, or an optimizer.
 
@@ -42,7 +42,7 @@ flowchart LR
     S --> O["Output<br/>256 × 10"]
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 | Parameter | Value |
 |---|---:|
@@ -70,7 +70,7 @@ Inputs, weights, and biases are generated deterministically using sine and cosin
 
 ---
 
-# 🔄 Execution Workflow
+#  Execution Workflow
 
 ```mermaid
 flowchart TD
@@ -100,7 +100,7 @@ flowchart LR
 
 ---
 
-# 💻 CUDA Implementation
+#  CUDA Implementation
 
 The program uses three custom CUDA kernels:
 
@@ -130,7 +130,7 @@ The matrix kernel uses **16 × 16 thread blocks**, while activation kernels use 
 
 ---
 
-# 📊 Performance Results
+#  Performance Results
 
 The benchmark below was obtained from a successful run on an **NVIDIA GeForce RTX 2050 (4 GB)**.
 
@@ -160,7 +160,7 @@ End-to-end:  2.083975 / 0.184795 = 11.28×
 
 ---
 
-# 📈 Graphical Analysis
+#  Graphical Analysis
 
 ## 1. Execution time comparison
 
@@ -225,7 +225,7 @@ For repeated inference or larger workloads, keeping data and model parameters on
 
 ---
 
-# 🔬 Validation
+#  Validation
 
 Every CUDA operation is tested before the full benchmark.
 
@@ -241,7 +241,7 @@ Expected = [23 27]
            [50 63]
 ```
 
-**Result: PASSED ✅**
+**Result: PASSED**
 
 ## ReLU
 
@@ -250,7 +250,7 @@ Input:    [-2, 0, 3, -4, 5]
 Expected: [ 0, 0, 3,  0, 5]
 ```
 
-**Result: PASSED ✅**
+**Result: PASSED**
 
 ## Sigmoid
 
@@ -259,7 +259,7 @@ Input:    [-2, 0, 2]
 Expected: approximately [0.119203, 0.500000, 0.880797]
 ```
 
-**Result: PASSED ✅**
+**Result: PASSED**
 
 ## Final CPU vs GPU validation
 
@@ -276,7 +276,7 @@ Maximum difference < 1 × 10⁻⁴
 
 ---
 
-# 🖥️ System Configuration
+# System Configuration
 
 | Component | Configuration |
 |---|---|
@@ -292,7 +292,7 @@ The executable was compiled specifically for the RTX 2050 architecture using `-a
 
 ---
 
-# ▶️ Build and Run
+#  Build and Run
 
 ## Prerequisites
 
@@ -324,7 +324,7 @@ neural_network.exe
 
 ---
 
-# 📁 Repository Structure
+#  Repository Structure
 
 ```text
 PGC-L5-NeuralNetwork-CUDA/
@@ -336,7 +336,7 @@ PGC-L5-NeuralNetwork-CUDA/
 
 ---
 
-# 📚 Concepts Demonstrated
+#  Concepts Demonstrated
 
 - CUDA kernel programming
 - GPU thread and block organization
@@ -351,7 +351,7 @@ PGC-L5-NeuralNetwork-CUDA/
 
 ---
 
-# 🏁 Conclusion
+#  Conclusion
 
 The two-layer neural network was successfully implemented and validated using custom CUDA kernels on an **NVIDIA GeForce RTX 2050**.
 
@@ -359,15 +359,14 @@ All individual kernels passed their validation tests, and the complete GPU forwa
 
 ## Final Outcome
 
-> 🚀 **32.13× faster kernel execution**
+> **32.13× faster kernel execution**
 
-> ⚡ **11.28× faster end-to-end execution**
+> **11.28× faster end-to-end execution**
 
 The experiment clearly demonstrates both the advantage of GPU parallelism for neural-network computations and the importance of memory-transfer overhead in real-world GPU performance.
 
 ---
 
-## 👨‍💻 Author
 
 **Sankalp Patil**  
 B.Tech – Computer Science & Artificial Intelligence  
